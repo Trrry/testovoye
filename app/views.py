@@ -101,7 +101,6 @@ def subcats(request, sub_id):
 @csrf_exempt
 def order(request):
     if request.method == 'POST':
-        data_unicode = request.body.decode('utf-8').replace('\0', '')
+        data_unicode = request.body.decode('utf-8')
         data = json.loads(data_unicode)
-        custom_decks = data['custom_decks']
-        return JsonResponse(custom_decks)
+        return JsonResponse(data)

@@ -23,5 +23,5 @@ urlpatterns = [
     url(r'^dishes/(?P<dish_id>(\d+))', disheslist),
     url(r'^categories/(?P<cat_id>(\d+))', categorieslist),
     url(r'^subcats/(?P<sub_id>(\d+))', subcats),
-    url(r'order/', order),
+    url(r'^order/', order),
     ]
