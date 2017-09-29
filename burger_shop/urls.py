@@ -20,7 +20,8 @@ from app.views import *
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'dishes/', disheslist),
-    url(r'categories/', categorieslist),
-    url(r'subcats/', subcats),
-]
+    url(r'^dishes/(?P<dish_id>(\d+))', disheslist),
+    url(r'^categories/(?P<cat_id>(\d+))', categorieslist),
+    url(r'^subcats/(?P<sub_id>(\d+))', subcats),
+    url(r'order/', order),
+    ]
